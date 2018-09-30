@@ -1,1 +1,4 @@
-# docker-jenkins-workshop
+# docker jenkins workshop
+
+sample project for docker.
+
