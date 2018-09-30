@@ -3,7 +3,7 @@ version: '2'
 services:
   app:
     build: .
-    image: ${DOCKER_USER_ID}/ruby-app
+    image: ${DOCKER_USER_ID}/docker_tutorial
   unit:
     image: ruby:2.3
     volumes:
@@ -11,6 +11,6 @@ services:
     working_dir: /app
     command: bash -c "bundle install && bundle exec ruby app_test.rb"
   production:
-    image: ${DOCKER_USER_ID}/ruby-app:${BUILD_NUMBER}
+    image: ${DOCKER_USER_ID}/docker_tutorial:${BUILD_NUMBER}
     ports:
       - 10001:4567
